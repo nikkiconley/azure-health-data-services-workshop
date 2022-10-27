@@ -1419,7 +1419,7 @@ resource fhirProxyAppSettings 'Microsoft.Web/sites/config@2021-02-01' = {
   name: 'appsettings'
   parent: fhirProxyFunctionApp
   properties: {
-    'FUNCTIONS_EXTENSION_VERSION': '~3'
+    'FUNCTIONS_EXTENSION_VERSION': '~4'
     'FUNCTIONS_WORKER_RUNTIME': 'dotnet'
     'APPINSIGHTS_INSTRUMENTATIONKEY':proxyAppInsights.properties.InstrumentationKey
     'AzureWebJobsStorage': 'DefaultEndpointsProtocol=https;AccountName=${functionsStorageAccount.name};EndpointSuffix=${environment().suffixes.storage};AccountKey=${listKeys(functionsStorageAccount.id, functionsStorageAccount.apiVersion).keys[0].value}'
